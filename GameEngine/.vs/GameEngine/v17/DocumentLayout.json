@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Documents\\01_Facultate\\Anul_3\\Sem_1\\ACG\\project\\GameEngine\\GameEngine\\",
+  "WorkspaceRootPath": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\01_Facultate\\Anul_3\\Sem_1\\ACG\\project\\GameEngine\\GameEngine\\GameEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -20,11 +20,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "D:\\Documents\\01_Facultate\\Anul_3\\Sem_1\\ACG\\project\\GameEngine\\GameEngine\\GameEngine\\main.cpp",
+              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp",
               "RelativeDocumentMoniker": "GameEngine\\main.cpp",
-              "ToolTip": "D:\\Documents\\01_Facultate\\Anul_3\\Sem_1\\ACG\\project\\GameEngine\\GameEngine\\GameEngine\\main.cpp",
+              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp",
               "RelativeToolTip": "GameEngine\\main.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAIsAAAAAAAAAAAAYwJcAAABBAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-27T17:32:06.107Z",
               "EditorCaption": ""

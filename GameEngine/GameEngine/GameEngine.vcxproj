@@ -142,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Textures\rock.bmp" />
+    <Image Include="Resources\Textures\terrain.bmp" />
     <Image Include="Resources\Textures\wood.bmp" />
   </ItemGroup>
   <ItemGroup>

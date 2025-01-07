@@ -28,6 +28,7 @@ int main()
 	GLuint tex = loadBMP("Resources/Textures/wood.bmp");
 	GLuint tex2 = loadBMP("Resources/Textures/rock.bmp");
 	GLuint tex3 = loadBMP("Resources/Textures/orange.bmp");
+	GLuint tex4 = loadBMP("Resources/Textures/terrain.bmp");
 
 	glEnable(GL_DEPTH_TEST);
 
@@ -72,19 +73,28 @@ int main()
 	textures3[0].id = tex3;
 	textures3[0].type = "texture_diffuse";
 
+	std::vector<Texture> textures4;
+	textures4.push_back(Texture());
+	textures4[0].id = tex4;
+	textures4[0].type = "texture_diffuse";
 
-	Mesh mesh(vert, ind, textures3);
+	//Mesh mesh(vert, ind, textures3);
+	Mesh mesh(vert, ind, textures4);
 
 	// Create Obj files - easier :)
 	// we can add here our textures :)
 	MeshLoaderObj loader;
 	Mesh sun = loader.loadObj("Resources/Models/sphere.obj");
 	Mesh box = loader.loadObj("Resources/Models/cube.obj", textures);
-	Mesh plane = loader.loadObj("Resources/Models/plane.obj", textures3);
+	//Mesh plane = loader.loadObj("Resources/Models/plane.obj", textures3);
+	Mesh plane1 = loader.loadObj("Resources/Models/plane1.obj", textures4);
+	Mesh humanoid = loader.loadObj("Resources/Models/11072_HumanoidRobot_v3.obj");
 
 	//check if we close the window or press the escape button
 	while (!window.isPressed(GLFW_KEY_ESCAPE) &&
 		glfwWindowShouldClose(window.getWindow()) == 0)
+
+
 	{
 		window.clear();
 		float currentFrame = glfwGetTime();
@@ -122,11 +132,12 @@ int main()
 
 		///// Test Obj files for box ////
 
-		GLuint MatrixID2 = glGetUniformLocation(shader.getId(), "MVP");
-		GLuint ModelMatrixID = glGetUniformLocation(shader.getId(), "model");
+		GLuint MatrixID2 = glGetUniformLocation(shader.getId(), "MVP"); //mvp matrix to shader part 1
+		GLuint ModelMatrixID = glGetUniformLocation(shader.getId(), "model"); //model matrix to shader part 1
 
 		ModelMatrix = glm::mat4(1.0);
 		ModelMatrix = glm::translate(ModelMatrix, glm::vec3(0.0f, 0.0f, 0.0f));
+		//ModelMatrix = glm::scale(ModelMatrix, glm::vec3(0.0f, 0.0f, 0.0f)); //scaling
 		MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
 		glUniformMatrix4fv(MatrixID2, 1, GL_FALSE, &MVP[0][0]);
 		glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
@@ -136,7 +147,40 @@ int main()
 
 		box.draw(shader);
 
+		///// Test Obj files for humanoid ////
+
+		GLuint MatrixID3 = glGetUniformLocation(shader.getId(), "MVP");
+		GLuint ModelMatrixID3 = glGetUniformLocation(shader.getId(), "model");
+
+
+		ModelMatrix = glm::mat4(1.0);
+		
+		ModelMatrix = glm::rotate(ModelMatrix, -90.0f, glm::vec3(1.0f, 0.0f, 0.0f)); //rotation
+		ModelMatrix = glm::translate(ModelMatrix, glm::vec3(5.0f, 5.0f, 0.0f)); //translation
+		ModelMatrix = glm::scale(ModelMatrix, glm::vec3(0.2f, 0.2f, 0.2f)); //scaling
+		
+		MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+		glUniformMatrix4fv(MatrixID3, 1, GL_FALSE, &MVP[0][0]); //mvp matrix to shader part 2
+		glUniformMatrix4fv(ModelMatrixID3, 1, GL_FALSE, &ModelMatrix[0][0]); //model matrix to shader part 2
+
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightColor"), lightColor.x, lightColor.y, lightColor.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
+
+		humanoid.draw(shader);
+
+
 		///// Test plane Obj file //////
+
+		/*ModelMatrix = glm::mat4(1.0);
+		ModelMatrix = glm::translate(ModelMatrix, glm::vec3(0.0f, -20.0f, 0.0f));
+		MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+		glUniformMatrix4fv(MatrixID2, 1, GL_FALSE, &MVP[0][0]);
+		glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
+
+		plane.draw(shader);*/
+
+		///// Test Obj files for plane1 ////
 
 		ModelMatrix = glm::mat4(1.0);
 		ModelMatrix = glm::translate(ModelMatrix, glm::vec3(0.0f, -20.0f, 0.0f));
@@ -144,7 +188,7 @@ int main()
 		glUniformMatrix4fv(MatrixID2, 1, GL_FALSE, &MVP[0][0]);
 		glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
 
-		plane.draw(shader);
+		plane1.draw(shader);
 
 		window.update();
 	}
