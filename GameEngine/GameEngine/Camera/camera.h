@@ -37,5 +37,7 @@ class Camera
 
 		void rotateOx(float angle);
 		void rotateOy(float angle);
+
+		void setPositionDirectionHumanoid(glm::vec3 position, glm::vec3 viewDirection);
 };
 

@@ -94,4 +94,11 @@ glm::vec3 Camera::getCameraUp()
 	return cameraUp;
 }
 
+void Camera::setPositionDirectionHumanoid(glm::vec3 position, glm::vec3 viewDirection)
+{
+	cameraPosition = position;
+	cameraViewDirection = viewDirection;
+	cameraRight = glm::cross(cameraViewDirection, cameraUp);
+}
+
 
