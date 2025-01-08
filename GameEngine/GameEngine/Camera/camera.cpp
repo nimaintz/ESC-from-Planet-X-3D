@@ -12,7 +12,7 @@ Camera::Camera(glm::vec3 cameraPosition)
 
 Camera::Camera()
 {
-	this ->cameraPosition = glm::vec3(0.0f, 0.0f, 100.0f);
+	this ->cameraPosition = glm::vec3(0.0f, 20.0f, 100.0f);
 	this ->cameraViewDirection = glm::vec3(0.0f, 0.0f, -1.0f);
 	this ->cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
 	this->cameraRight = glm::cross(cameraViewDirection, cameraUp);
@@ -81,15 +81,15 @@ void Camera::rotateOx(float angle)
 
 void Camera::rotateOy (float angle)
 {
-	//// Create a rotation matrix around the world up vector (Y-axis)
-	//glm::mat4 rotationMatrix = glm::rotate(glm::mat4(1.0f), angle, cameraUp);
+	// Create a rotation matrix around the world up vector (Y-axis)
+	glm::mat4 rotationMatrix = glm::rotate(glm::mat4(1.0f), angle, cameraUp);
 
-	//// Apply the rotation to cameraViewDirection
-	//glm::vec4 rotatedDirection = rotationMatrix * glm::vec4(cameraViewDirection, 0.0f);
-	//cameraViewDirection = glm::normalize(glm::vec3(rotatedDirection));
+	// Apply the rotation to cameraViewDirection
+	glm::vec4 rotatedDirection = rotationMatrix * glm::vec4(cameraViewDirection, 0.0f);
+	cameraViewDirection = glm::normalize(glm::vec3(rotatedDirection));
 
-	//// Recalculate the right vector to remain perpendicular
-	//cameraRight = glm::cross(cameraViewDirection, cameraUp);
+	// Recalculate the right vector to remain perpendicular
+	cameraRight = glm::cross(cameraViewDirection, cameraUp);
 }
 
 glm::mat4 Camera::getViewMatrix()
