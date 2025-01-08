@@ -17,8 +17,8 @@ glm::vec3 lightColor = glm::vec3(1.0f);
 glm::vec3 lightPos = glm::vec3(-180.0f, 100.0f, -200.0f);
 
 //humanoid in relation to the camera
-glm::vec3 humanoidPosition = glm::vec3(0.0f, 0.0f, 0.0f);
-glm::vec3 humanoidDirection = glm::vec3(0.0f, 0.0f, -1.0f); //forward
+//glm::vec3 humanoidPosition = glm::vec3(0.0f, 0.0f, 0.0f);
+//glm::vec3 humanoidDirection = glm::vec3(0.0f, 0.0f, -1.0f); //forward
 
 
 int main()
@@ -159,7 +159,7 @@ int main()
 		ModelMatrix = glm::mat4(1.0);
 		
 		ModelMatrix = glm::rotate(ModelMatrix, -90.0f, glm::vec3(1.0f, 0.0f, 0.0f)); //rotation
-		ModelMatrix = glm::translate(ModelMatrix, humanoidPosition); //translation
+		ModelMatrix = glm::translate(ModelMatrix, glm::vec3(0.0f, 0.0f, 0.0f)); //translation
 		ModelMatrix = glm::scale(ModelMatrix, glm::vec3(0.2f, 0.2f, 0.2f)); //scaling
 		
 		MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
@@ -200,26 +200,27 @@ int main()
 void processKeyboardInput()
 {
 	float cameraSpeed = 30 * deltaTime;
-	float rotateSpeed = 45.0f * deltaTime; // Example rotation speed
+	//float rotateSpeed = 45.0f * deltaTime; // Example rotation speed
 
-	// Movement (relative to humanoid's forward direction)
-	if (window.isPressed(GLFW_KEY_UP)) // Move forward
-		humanoidPosition += humanoidDirection * cameraSpeed;
-	if (window.isPressed(GLFW_KEY_DOWN)) // Move backward
-		humanoidPosition -= humanoidDirection * cameraSpeed;
 
-	// Rotation (around Y-axis)
-	if (window.isPressed(GLFW_KEY_LEFT)) { // Rotate left
-		float angle = rotateSpeed;
-		humanoidDirection = glm::normalize(glm::vec3(glm::rotate(glm::mat4(1.0f), angle, glm::vec3(0.0f, 1.0f, 0.0f)) * glm::vec4(humanoidDirection, 1.0f)));
-	}
-	if (window.isPressed(GLFW_KEY_RIGHT)) { // Rotate right
-		float angle = -rotateSpeed;
-		humanoidDirection = glm::normalize(glm::vec3(glm::rotate(glm::mat4(1.0f), angle, glm::vec3(0.0f, 1.0f, 0.0f)) * glm::vec4(humanoidDirection, 1.0f)));
-	}
+	//// Movement (relative to humanoid's forward direction)
+	//if (window.isPressed(GLFW_KEY_UP))  // Move forward
+	//	humanoidPosition += humanoidDirection * cameraSpeed;
+	//if (window.isPressed(GLFW_KEY_DOWN))  // Move backward
+	//	humanoidPosition -= humanoidDirection * cameraSpeed;
 
-	// Update the camera's position and view direction to match the humanoid's perspective
-	camera.setPositionDirectionHumanoid(humanoidPosition + glm::vec3(0.0f, 13.0f, 0.0f), humanoidDirection); // Offset Y for height
+	//// Rotation (around Y-axis)
+	//if (window.isPressed(GLFW_KEY_LEFT)) { // Rotate left
+	//	float angle = 45.0f * deltaTime;
+	//	humanoidDirection = glm::normalize(glm::vec3(glm::rotate(glm::mat4(1.0f), angle, glm::vec3(0.0f, 1.0f, 0.0f)) * glm::vec4(humanoidDirection, 1.0f)));
+	//}
+	//if (window.isPressed(GLFW_KEY_RIGHT)) { // Rotate right
+	//	float angle = -45.0f * deltaTime;
+	//	humanoidDirection = glm::normalize(glm::vec3(glm::rotate(glm::mat4(1.0f), angle, glm::vec3(0.0f, 1.0f, 0.0f)) * glm::vec4(humanoidDirection, 1.0f)));
+	//}
+
+	//// Update the camera's position and view direction to match the humanoid's perspective
+	//camera.setPositionDirectionHumanoid(humanoidPosition + glm::vec3(0.0f, 13.0f, 0.0f), humanoidDirection); // Offset Y for height
 	//translation
 	/*if (window.isPressed(GLFW_KEY_W))
 		camera.keyboardMoveFront(cameraSpeed);
@@ -243,4 +244,7 @@ void processKeyboardInput()
 		camera.rotateOx(cameraSpeed);
 	if (window.isPressed(GLFW_KEY_DOWN))
 		camera.rotateOx(-cameraSpeed);*/
+
+	/*if (window.isPressed(GLFW_KEY_LEFT))
+		camera.*/
 }
