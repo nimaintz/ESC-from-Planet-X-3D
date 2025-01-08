@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\",
+  "WorkspaceRootPath": "C:\\Users\\chior\\Desktop\\FACULTATE\\materiale_anul_3\\ACG\\3D_project\\ESC-from-Planet-X-3D\\GameEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|C:\\Users\\chior\\Desktop\\FACULTATE\\materiale_anul_3\\ACG\\3D_project\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|C:\\Users\\chior\\Desktop\\FACULTATE\\materiale_anul_3\\ACG\\3D_project\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Camera\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|C:\\Users\\chior\\Desktop\\FACULTATE\\materiale_anul_3\\ACG\\3D_project\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Camera\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -28,23 +28,24 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "camera.h",
-              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.h",
+              "DocumentMoniker": "C:\\Users\\chior\\Desktop\\FACULTATE\\materiale_anul_3\\ACG\\3D_project\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.h",
               "RelativeDocumentMoniker": "GameEngine\\Camera\\camera.h",
-              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.h",
+              "ToolTip": "C:\\Users\\chior\\Desktop\\FACULTATE\\materiale_anul_3\\ACG\\3D_project\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.h",
               "RelativeToolTip": "GameEngine\\Camera\\camera.h",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAAAB8AAAArAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2025-01-07T17:32:27.567Z"
+              "WhenOpened": "2025-01-07T17:32:27.567Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "camera.cpp",
-              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp",
+              "DocumentMoniker": "C:\\Users\\chior\\Desktop\\FACULTATE\\materiale_anul_3\\ACG\\3D_project\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp",
               "RelativeDocumentMoniker": "GameEngine\\Camera\\camera.cpp",
-              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp",
+              "ToolTip": "C:\\Users\\chior\\Desktop\\FACULTATE\\materiale_anul_3\\ACG\\3D_project\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp",
               "RelativeToolTip": "GameEngine\\Camera\\camera.cpp",
-              "ViewState": "AgIAAGMAAAAAAAAAAAAAAH8AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-07T17:31:55.427Z",
               "EditorCaption": ""
@@ -53,11 +54,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp",
+              "DocumentMoniker": "C:\\Users\\chior\\Desktop\\FACULTATE\\materiale_anul_3\\ACG\\3D_project\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp",
               "RelativeDocumentMoniker": "GameEngine\\main.cpp",
-              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp*",
-              "RelativeToolTip": "GameEngine\\main.cpp*",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAAAOMAAAAnAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\chior\\Desktop\\FACULTATE\\materiale_anul_3\\ACG\\3D_project\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp",
+              "RelativeToolTip": "GameEngine\\main.cpp",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABcAAAA2AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-27T17:32:06.107Z",
               "EditorCaption": ""
