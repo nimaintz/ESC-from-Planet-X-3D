@@ -1,10 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Documents\\01_Facultate\\Anul_3\\Sem_1\\ACG\\project\\GameEngine\\GameEngine\\",
+  "WorkspaceRootPath": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\01_Facultate\\Anul_3\\Sem_1\\ACG\\project\\GameEngine\\GameEngine\\GameEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Camera\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Model Loading\\texture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Model Loading\\texture.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Model Loading\\texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Model Loading\\texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Shaders\\skybox_fragment_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Shaders\\skybox_fragment_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Shaders\\skybox_vertex_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Shaders\\skybox_vertex_shader.glsl||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Shaders\\shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Shaders\\shader.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Camera\\camera.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,19 +42,108 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "main.cpp",
-              "DocumentMoniker": "D:\\Documents\\01_Facultate\\Anul_3\\Sem_1\\ACG\\project\\GameEngine\\GameEngine\\GameEngine\\main.cpp",
+              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp",
               "RelativeDocumentMoniker": "GameEngine\\main.cpp",
-              "ToolTip": "D:\\Documents\\01_Facultate\\Anul_3\\Sem_1\\ACG\\project\\GameEngine\\GameEngine\\GameEngine\\main.cpp",
+              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp",
               "RelativeToolTip": "GameEngine\\main.cpp",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAO8AAAAAAAAAAAAswOoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-27T17:32:06.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "texture.h",
+              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Model Loading\\texture.h",
+              "RelativeDocumentMoniker": "GameEngine\\Model Loading\\texture.h",
+              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Model Loading\\texture.h",
+              "RelativeToolTip": "GameEngine\\Model Loading\\texture.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-10T21:43:03.372Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "texture.cpp",
+              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Model Loading\\texture.cpp",
+              "RelativeDocumentMoniker": "GameEngine\\Model Loading\\texture.cpp",
+              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Model Loading\\texture.cpp",
+              "RelativeToolTip": "GameEngine\\Model Loading\\texture.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAAAcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T21:42:28.843Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "shader.cpp",
+              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Shaders\\shader.cpp",
+              "RelativeDocumentMoniker": "GameEngine\\Shaders\\shader.cpp",
+              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Shaders\\shader.cpp",
+              "RelativeToolTip": "GameEngine\\Shaders\\shader.cpp",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-10T21:40:55.303Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "skybox_vertex_shader.glsl",
+              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Shaders\\skybox_vertex_shader.glsl",
+              "RelativeDocumentMoniker": "GameEngine\\Shaders\\skybox_vertex_shader.glsl",
+              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Shaders\\skybox_vertex_shader.glsl",
+              "RelativeToolTip": "GameEngine\\Shaders\\skybox_vertex_shader.glsl",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-10T21:41:33.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "skybox_fragment_shader.glsl",
+              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Shaders\\skybox_fragment_shader.glsl",
+              "RelativeDocumentMoniker": "GameEngine\\Shaders\\skybox_fragment_shader.glsl",
+              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Shaders\\skybox_fragment_shader.glsl",
+              "RelativeToolTip": "GameEngine\\Shaders\\skybox_fragment_shader.glsl",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2025-01-10T21:41:13.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "camera.h",
+              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.h",
+              "RelativeDocumentMoniker": "GameEngine\\Camera\\camera.h",
+              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.h",
+              "RelativeToolTip": "GameEngine\\Camera\\camera.h",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
+              "WhenOpened": "2025-01-07T17:32:27.567Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "camera.cpp",
+              "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp",
+              "RelativeDocumentMoniker": "GameEngine\\Camera\\camera.cpp",
+              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp",
+              "RelativeToolTip": "GameEngine\\Camera\\camera.cpp",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABMAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-07T17:31:55.427Z",
               "EditorCaption": ""
             }
           ]

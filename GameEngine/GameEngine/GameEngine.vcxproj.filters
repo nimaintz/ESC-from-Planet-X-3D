@@ -65,12 +65,17 @@
     <None Include="Shaders\fragment_shader.glsl" />
     <None Include="Shaders\sun_fragment_shader.glsl" />
     <None Include="Shaders\sun_vertex_shader.glsl" />
+    <None Include="Shaders\skybox_fragment_shader.glsl" />
+    <None Include="Shaders\skybox_vertex_shader.glsl" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="Resources\Textures\wood.bmp">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="Resources\Textures\rock.bmp">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="Resources\Textures\terrain.bmp">
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
