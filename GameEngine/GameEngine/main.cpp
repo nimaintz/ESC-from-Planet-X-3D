@@ -4,6 +4,11 @@
 #include "Model Loading\mesh.h"
 #include "Model Loading\texture.h"
 #include "Model Loading\meshLoaderObj.h"
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
+
 
 void processKeyboardInput ();
 
@@ -167,6 +172,19 @@ int main()
 	GLuint MatrixID2 = glGetUniformLocation(sunShader.getId(), "MVP");
 	GLuint ModelMatrixID2 = glGetUniformLocation(sunShader.getId(), "model");
 
+	//ImGui
+	// Initialize ImGui context
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); (void)io;
+
+	// Set ImGui style
+	ImGui::StyleColorsDark();
+
+	// Initialize ImGui for GLFW and OpenGL
+	ImGui_ImplGlfw_InitForOpenGL(window.getWindow(), true);
+	ImGui_ImplOpenGL3_Init("#version 400");
+
 	//check if we close the window or press the escape button
 	while (!window.isPressed(GLFW_KEY_ESCAPE) &&
 		glfwWindowShouldClose(window.getWindow()) == 0)
@@ -261,6 +279,24 @@ int main()
 		glBindTexture(GL_TEXTURE_CUBE_MAP, cubemapTexture);
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 		glDepthFunc(GL_LESS); // Restore depth test
+
+		//ImGui
+		// Start a new ImGui frame
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+
+		// Create an ImGui window (example)
+		ImGui::Begin("Hello, ImGui!");  // Window title
+		ImGui::Text("This is an ImGui window!");
+		ImGui::SliderFloat("Light X", &lightPos.x, -500.0f, 500.0f);
+		ImGui::SliderFloat("Light Y", &lightPos.y, -500.0f, 500.0f);
+		ImGui::SliderFloat("Light Z", &lightPos.z, -500.0f, 500.0f);
+		ImGui::End();
+
+		// Render ImGui content
+		ImGui::Render();
+		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
 
 		window.update();
 	}
