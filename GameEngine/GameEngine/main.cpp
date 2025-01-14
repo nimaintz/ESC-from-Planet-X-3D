@@ -178,7 +178,7 @@ int main()
 	//Mesh coral = loader.loadObj("Resources/Models/coral.obj", textures);
 	//Mesh cruiser = loader.loadObj("Resources/Models/cruiser_ship.obj", textures);
 	Mesh mushroom = loader.loadObj("Resources/Models/mushroom.obj", textures5);
-	Mesh rocket = loader.loadObj("Resources/Models/rocket.obj", textures6);
+	Mesh rocket = loader.loadObj("Resources/Models/roket.obj", textures6);
 
 	GLuint MatrixID = glGetUniformLocation(shader.getId(), "MVP");
 	GLuint ModelMatrixID = glGetUniformLocation(shader.getId(), "model");
@@ -321,7 +321,7 @@ int main()
 		ModelMatrix = glm::mat4(1.0);
 		//ModelMatrix = glm::translate(ModelMatrix, getArmPosition()); //translation
 		//ModelMatrix = glm::rotate(ModelMatrix, 130.0f, glm::vec3(0.0f, 0.0f, 1.0f)); //rotation
-		ModelMatrix = glm::scale(ModelMatrix, glm::vec3(10.0f, 10.0f, 10.0f)); //scaling
+		ModelMatrix = glm::scale(ModelMatrix, glm::vec3(30.0f, 30.0f, 30.0f)); //scaling
 
 		MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
 		glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]); //mvp matrix to shader part 2
