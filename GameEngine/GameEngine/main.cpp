@@ -4,6 +4,8 @@
 #include "Model Loading\mesh.h"
 #include "Model Loading\texture.h"
 #include "Model Loading\meshLoaderObj.h"
+//#define STB_IMAGE_IMPLEMENTATION
+//#include "stb_image.h"
 
 void processKeyboardInput ();
 
@@ -44,6 +46,8 @@ int main()
 	GLuint tex2 = loadBMP("Resources/Textures/rock.bmp");
 	GLuint tex3 = loadBMP("Resources/Textures/orange.bmp");
 	GLuint tex4 = loadBMP("Resources/Textures/terrain.bmp");
+	GLuint tex5 = loadBMP("Resources/Textures/mushroom.bmp");
+	GLuint tex6 = loadBMP("Resources/Textures/colors.bmp");
 
 	unsigned int  cubemapTexture = loadCubemap(skyboxFaces); //skybox
 
@@ -151,6 +155,16 @@ int main()
 	textures4[0].id = tex4;
 	textures4[0].type = "texture_diffuse";
 
+	std::vector<Texture> textures5;
+	textures5.push_back(Texture());
+	textures5[0].id = tex5;
+	textures5[0].type = "texture_diffuse";
+
+	std::vector<Texture> textures6;
+	textures6.push_back(Texture());
+	textures6[0].id = tex6;
+	textures6[0].type = "texture_diffuse";
+
 	//Mesh mesh(vert, ind, textures3);
 	Mesh mesh(vert, ind, textures4);
 
@@ -159,7 +173,12 @@ int main()
 	Mesh box = loader.loadObj("Resources/Models/cube.obj", textures);
 	//Mesh plane = loader.loadObj("Resources/Models/plane.obj", textures3);
 	Mesh plane1 = loader.loadObj("Resources/Models/plane1.obj", textures4);
-	Mesh arm = loader.loadObj("Resources/Models/arm.obj");
+	Mesh arm = loader.loadObj("Resources/Models/arm.obj", textures);
+	//Mesh tubes = loader.loadObj("Resources/Models/alien_tubes.obj", textures);
+	//Mesh coral = loader.loadObj("Resources/Models/coral.obj", textures);
+	//Mesh cruiser = loader.loadObj("Resources/Models/cruiser_ship.obj", textures);
+	Mesh mushroom = loader.loadObj("Resources/Models/mushroom.obj", textures5);
+	Mesh rocket = loader.loadObj("Resources/Models/rocket.obj", textures6);
 
 	GLuint MatrixID = glGetUniformLocation(shader.getId(), "MVP");
 	GLuint ModelMatrixID = glGetUniformLocation(shader.getId(), "model");
@@ -238,6 +257,81 @@ int main()
 		glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
 
 		arm.draw(shader);
+
+		ModelMatrix = glm::mat4(1.0);
+		//ModelMatrix = glm::translate(ModelMatrix, getArmPosition()); //translation
+		//ModelMatrix = glm::rotate(ModelMatrix, 130.0f, glm::vec3(0.0f, 0.0f, 1.0f)); //rotation
+		//ModelMatrix = glm::scale(ModelMatrix, glm::vec3(0.3f, 0.3f, 0.3f)); //scaling
+
+		//MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+		//glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]); //mvp matrix to shader part 2
+		//glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]); //model matrix to shader part 2
+
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightColor"), lightColor.x, lightColor.y, lightColor.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
+
+		//tubes.draw(shader);
+
+		ModelMatrix = glm::mat4(1.0);
+		//ModelMatrix = glm::translate(ModelMatrix, getArmPosition()); //translation
+		//ModelMatrix = glm::rotate(ModelMatrix, 130.0f, glm::vec3(0.0f, 0.0f, 1.0f)); //rotation
+		//ModelMatrix = glm::scale(ModelMatrix, glm::vec3(0.3f, 0.3f, 0.3f)); //scaling
+
+		//MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+		//glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]); //mvp matrix to shader part 2
+		//glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]); //model matrix to shader part 2
+
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightColor"), lightColor.x, lightColor.y, lightColor.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
+
+		//coral.draw(shader);
+
+		ModelMatrix = glm::mat4(1.0);
+		//ModelMatrix = glm::translate(ModelMatrix, getArmPosition()); //translation
+		//ModelMatrix = glm::rotate(ModelMatrix, 130.0f, glm::vec3(0.0f, 0.0f, 1.0f)); //rotation
+		//ModelMatrix = glm::scale(ModelMatrix, glm::vec3(0.3f, 0.3f, 0.3f)); //scaling
+
+		//MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+		//glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]); //mvp matrix to shader part 2
+		//glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]); //model matrix to shader part 2
+
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightColor"), lightColor.x, lightColor.y, lightColor.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
+
+		//cruiser.draw(shader);
+
+		ModelMatrix = glm::mat4(1.0);
+		//ModelMatrix = glm::translate(ModelMatrix, getArmPosition()); //translation
+		//ModelMatrix = glm::rotate(ModelMatrix, 130.0f, glm::vec3(0.0f, 0.0f, 1.0f)); //rotation
+		ModelMatrix = glm::scale(ModelMatrix, glm::vec3(10.0f, 10.0f, 10.0f)); //scaling
+
+		MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+		glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]); //mvp matrix to shader part 2
+		glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]); //model matrix to shader part 2
+
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightColor"), lightColor.x, lightColor.y, lightColor.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
+
+		mushroom.draw(shader);
+
+		ModelMatrix = glm::mat4(1.0);
+		//ModelMatrix = glm::translate(ModelMatrix, getArmPosition()); //translation
+		//ModelMatrix = glm::rotate(ModelMatrix, 130.0f, glm::vec3(0.0f, 0.0f, 1.0f)); //rotation
+		ModelMatrix = glm::scale(ModelMatrix, glm::vec3(10.0f, 10.0f, 10.0f)); //scaling
+
+		MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+		glUniformMatrix4fv(MatrixID, 1, GL_FALSE, &MVP[0][0]); //mvp matrix to shader part 2
+		glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]); //model matrix to shader part 2
+
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightColor"), lightColor.x, lightColor.y, lightColor.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+		//glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
+
+		rocket.draw(shader);
 
 		///// Test plane Obj file //////
 
