@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\main.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Resources\\Models\\alien.mtl||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Resources\\Models\\alien.mtl||{8B382828-6202-11D1-8870-0000F87579D2}"
+      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Camera\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Model Loading\\texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Model Loading\\texture.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{7DB4A041-6210-429F-8FF3-63462ADD6A69}|GameEngine\\GameEngine.vcxproj|solutionrelative:GameEngine\\Camera\\camera.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Resources\\Models\\alien.mtl||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GameEngine\\Resources\\Models\\alien.mtl||{8B382828-6202-11D1-8870-0000F87579D2}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,8 +29,12 @@
           "SelectedChildIndex": 4,
           "Children": [
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "alien.mtl",
               "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Resources\\Models\\alien.mtl",
               "RelativeDocumentMoniker": "GameEngine\\Resources\\Models\\alien.mtl",
@@ -38,12 +42,7 @@
               "RelativeToolTip": "GameEngine\\Resources\\Models\\alien.mtl",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAABiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
-              "WhenOpened": "2025-01-15T02:09:51.626Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+              "WhenOpened": "2025-01-15T02:09:51.626Z"
             },
             {
               "$type": "Document",
@@ -55,18 +54,17 @@
               "RelativeToolTip": "GameEngine\\Model Loading\\texture.cpp",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2025-01-15T01:02:00.665Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-15T01:02:00.665Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "camera.cpp",
               "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp",
               "RelativeDocumentMoniker": "GameEngine\\Camera\\camera.cpp",
               "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\Camera\\camera.cpp",
               "RelativeToolTip": "GameEngine\\Camera\\camera.cpp",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-01-15T00:44:05.566Z",
               "EditorCaption": ""
@@ -77,9 +75,9 @@
               "Title": "main.cpp",
               "DocumentMoniker": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp",
               "RelativeDocumentMoniker": "GameEngine\\main.cpp",
-              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp",
-              "RelativeToolTip": "GameEngine\\main.cpp",
-              "ViewState": "AgIAAB8BAAAAAAAAAAAawEEBAAAWAAAAAAAAAA==",
+              "ToolTip": "D:\\Documents\\GitHub\\ESC-from-Planet-X-3D\\GameEngine\\GameEngine\\main.cpp*",
+              "RelativeToolTip": "GameEngine\\main.cpp*",
+              "ViewState": "AgIAAMsBAAAAAAAAAAAqwOABAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-12-27T17:32:06.107Z",
               "EditorCaption": ""

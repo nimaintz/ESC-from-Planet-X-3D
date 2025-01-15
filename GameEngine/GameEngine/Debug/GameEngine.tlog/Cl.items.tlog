@@ -1,5 +1,12 @@
 D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Camera\camera.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\camera.obj
 D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Graphics\window.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\window.obj
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\imgui\imgui.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\imgui.obj
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\imgui\imgui_demo.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\imgui_demo.obj
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\imgui\imgui_draw.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\imgui_draw.obj
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\imgui\imgui_impl_glfw.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\imgui_impl_glfw.obj
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\imgui\imgui_impl_opengl3.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\imgui_impl_opengl3.obj
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\imgui\imgui_tables.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\imgui_tables.obj
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\imgui\imgui_widgets.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\imgui_widgets.obj
 D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\main.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\main.obj
 D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Model Loading\meshLoaderObj.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\meshLoaderObj.obj
 D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Model Loading\mesh.cpp;D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\Debug\mesh.obj

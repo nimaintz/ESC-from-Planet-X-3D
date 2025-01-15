@@ -5,6 +5,10 @@
 #include "Model Loading\texture.h"
 #include "Model Loading\meshLoaderObj.h"
 
+#include "imgui.h"
+#include "imgui_impl_glfw.h"
+#include "imgui_impl_opengl3.h"
+
 void processKeyboardInput();
 
 float deltaTime = 0.0f;	// time between current frame and last frame
@@ -162,11 +166,22 @@ int main()
 	textures5[0].id = tex5;
 	textures5[0].type = "texture_diffuse";
 
+	// Initialize ImGui
+	IMGUI_CHECKVERSION();
+	ImGui::CreateContext();
+	ImGuiIO& io = ImGui::GetIO(); // Access ImGui input/output options
+	ImGui::StyleColorsDark();    // Set the style to Dark
+
+	// Setup platform/renderer bindings
+	ImGui_ImplGlfw_InitForOpenGL(window.getWindow(), true);
+	ImGui_ImplOpenGL3_Init("#version 330");
+
 
 	Mesh mesh(vert, ind, textures1);
 
 	MeshLoaderObj loader;
 	Mesh sun = loader.loadObj("Resources/Models/sphere.obj");
+	Mesh box = loader.loadObj("Resources/Models/cube.obj", textures);
 	Mesh plane1 = loader.loadObj("Resources/Models/plane1.obj", textures1);
 	Mesh mushroom1 = loader.loadObj("Resources/Models/mushroom.obj", textures2);
 	Mesh mushroom2 = loader.loadObj("Resources/Models/mushroom.obj", textures2);
@@ -178,17 +193,28 @@ int main()
 	Mesh arm = loader.loadObj("Resources/Models/arm.obj", textures4);
 	Mesh alien = loader.loadObj("Resources/Models/alien.obj", textures5);
 	
+	
 
 	//check if we close the window or press the escape button
 	while (!window.isPressed(GLFW_KEY_ESCAPE) &&
 		glfwWindowShouldClose(window.getWindow()) == 0)
 	{
 		window.clear();
+
+		//imgui
+		ImGui_ImplOpenGL3_NewFrame();
+		ImGui_ImplGlfw_NewFrame();
+		ImGui::NewFrame();
+
+
+
 		float currentFrame = glfwGetTime();
 		deltaTime = currentFrame - lastFrame;
 		lastFrame = currentFrame;
 
 		processKeyboardInput();
+
+		
 
 		//sun
 
@@ -197,6 +223,8 @@ int main()
 		glm::mat4 ProjectionMatrix = glm::perspective(90.0f, window.getWidth() * 1.0f / window.getHeight(), 0.1f, 10000.0f);
 		glm::mat4 ViewMatrix = glm::lookAt(camera.getCameraPosition(), camera.getCameraPosition() + camera.getCameraViewDirection(), camera.getCameraUp());
 		GLuint MatrixID = glGetUniformLocation(sunShader.getId(), "MVP");
+		GLuint MatrixID2 = glGetUniformLocation(shader.getId(), "MVP");
+		GLuint ModelMatrixID = glGetUniformLocation(shader.getId(), "model");
 
 
 		glm::mat4 ModelMatrix = glm::mat4(1.0);
@@ -206,11 +234,15 @@ int main()
 
 		sun.draw(sunShader);
 
+
+		
+
+
 		//shader for the rest of objects
 
 		shader.use();
-		GLuint MatrixID2 = glGetUniformLocation(shader.getId(), "MVP");
-		GLuint ModelMatrixID = glGetUniformLocation(shader.getId(), "model");
+		
+		
 		glUniform3f(glGetUniformLocation(shader.getId(), "lightColor"), lightColor.x, lightColor.y, lightColor.z);
 		glUniform3f(glGetUniformLocation(shader.getId(), "lightPos"), lightPos.x, lightPos.y, lightPos.z);
 		glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
@@ -225,7 +257,7 @@ int main()
 		plane1.draw(shader);
 
 		//arm
-		ModelMatrix = glm::mat4(1.0);
+		/*ModelMatrix = glm::mat4(1.0);
 		ModelMatrix = glm::translate(ModelMatrix, getArmPosition());
 		ModelMatrix = glm::rotate(ModelMatrix, 130.0f, glm::vec3(0.0f, 0.0f, 1.0f));
 		ModelMatrix = glm::scale(ModelMatrix, glm::vec3(0.3f, 0.3f, 0.3f));
@@ -233,7 +265,7 @@ int main()
 		glUniformMatrix4fv(MatrixID2, 1, GL_FALSE, &MVP[0][0]);
 		glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
 
-		arm.draw(shader);
+		arm.draw(shader);*/
 
 		//mushroom1
 		ModelMatrix = glm::mat4(1.0);
@@ -285,9 +317,154 @@ int main()
 
 		mushroom5.draw(shader);
 
+		static int taskNumber = 0;
+		//static std::string currentTexture = "textures"; // Texture state
+		static bool isFinished = false;
+		ImGui::Begin("ESC From Planet X");
+		if (!isFinished)
+			ImGui::TextWrapped("You are a rogue cyborg, stranded on a desolate planet, pursued by the relentless space police determined to bring you in for leading a daring revolt. Branded as a dangerous fugitive, your only hope of survival lies in escaping this forsaken world.Scavenge the planet for scattered objects to repair your damaged ship and make your getaway.Time is running out ... Outsmart your hunters and fight for your freedom!");
+
+		if (taskNumber == 1) {
+			ImGui::Text("Task 1");
+			ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "Find a nail box. Collect it to get to the next task.");
+		}
+		else if (taskNumber == 2) {
+			ImGui::Text("Task 2");
+			ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "Find the food supply box. Collect it to get to the next task.");
+		}
+		else if (taskNumber == 3) {
+			ImGui::Text("Task 3");
+			ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "Find the first aid box. Collect it to get to the next task.");
+		}
+		else if (taskNumber == 4) {
+			ImGui::Text("Task 4");
+			ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "Find the fuel crystals box. Collect it to get to the next task.");
+		}
+		else if (taskNumber == 5) {
+			ImGui::Text("Task 5");
+			ImGui::TextColored(ImVec4(1.0f, 0.0f, 0.0f, 1.0f), "This is task 5. Get to the spaceship. ");
+		}
+		else ImGui::Text("");
+
+
+		if (taskNumber == 0)
+			if (ImGui::Button("Start First Task")) {
+				taskNumber = 1;
+
+			}
+
+		if (isFinished) {
+			ImGui::Text("You have escaped from planet X");
+			if (ImGui::Button("ESC")) {
+				break;
+			}
+		}
+
+		ImGui::End();
+
+
+		if (taskNumber == 1)
+		{
+			ModelMatrix = glm::mat4(1.0);
+			ModelMatrix = glm::translate(ModelMatrix, glm::vec3(45.0f, 5.0f, 75.0f));
+			MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+			glUniformMatrix4fv(MatrixID2, 1, GL_FALSE, &MVP[0][0]);
+			glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
+			glUniform3f(glGetUniformLocation(shader.getId(), "lightColor"), lightColor.x, lightColor.y, lightColor.z);
+			glUniform3f(glGetUniformLocation(shader.getId(), "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+			glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
+			box.draw(shader);
+		}
+		else if (taskNumber == 2)
+		{
+			ModelMatrix = glm::mat4(1.0);
+			ModelMatrix = glm::translate(ModelMatrix, glm::vec3(-50.0f, 5.0f, 170.0f));
+			MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+			glUniformMatrix4fv(MatrixID2, 1, GL_FALSE, &MVP[0][0]);
+			glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
+			glUniform3f(glGetUniformLocation(shader.getId(), "lightColor"), lightColor.x, lightColor.y, lightColor.z);
+			glUniform3f(glGetUniformLocation(shader.getId(), "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+			glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
+			box.draw(shader);
+		}
+		else if (taskNumber == 3)
+		{
+			ModelMatrix = glm::mat4(1.0);
+			ModelMatrix = glm::translate(ModelMatrix, glm::vec3(160.0f, 5.0f, 160.0f));
+			MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+			glUniformMatrix4fv(MatrixID2, 1, GL_FALSE, &MVP[0][0]);
+			glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
+			glUniform3f(glGetUniformLocation(shader.getId(), "lightColor"), lightColor.x, lightColor.y, lightColor.z);
+			glUniform3f(glGetUniformLocation(shader.getId(), "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+			glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
+			box.draw(shader);
+		}
+		else if (taskNumber == 4)
+		{
+			ModelMatrix = glm::mat4(1.0);
+			ModelMatrix = glm::translate(ModelMatrix, glm::vec3(90.0f, 5.0f, -200.0f));
+			MVP = ProjectionMatrix * ViewMatrix * ModelMatrix;
+			glUniformMatrix4fv(MatrixID2, 1, GL_FALSE, &MVP[0][0]);
+			glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
+			glUniform3f(glGetUniformLocation(shader.getId(), "lightColor"), lightColor.x, lightColor.y, lightColor.z);
+			glUniform3f(glGetUniformLocation(shader.getId(), "lightPos"), lightPos.x, lightPos.y, lightPos.z);
+			glUniform3f(glGetUniformLocation(shader.getId(), "viewPos"), camera.getCameraPosition().x, camera.getCameraPosition().y, camera.getCameraPosition().z);
+			box.draw(shader);
+		}
+		else if (taskNumber == 5)
+		{
+			//no box go to rocket
+		}
+
+		glm::vec3 poz = camera.getCameraPosition();
+		printf("x: %f, y: %f, z: %f\n", (double)poz.x, (double)poz.y, (double)poz.z);
+
+		if (taskNumber == 1) {
+			glm::vec3 task = camera.getCameraPosition();
+			if (task.x >= 30 && task.x <= 60 && task.z >= 60 && task.z <= 90) {
+
+				taskNumber = 2;
+			}
+
+		}
+		else if (taskNumber == 2) {
+			glm::vec3 task = camera.getCameraPosition();
+			if (task.x >= -65 && task.x <= -35 && task.z >= 155 && task.z <= 185) {
+
+				taskNumber = 3;
+			}
+
+		}
+		else if (taskNumber == 3) {
+			glm::vec3 task = camera.getCameraPosition();
+			if (task.x >= 145 && task.x <= 175 && task.z >= 145 && task.z <= 175) {
+
+				taskNumber = 4;
+			}
+
+		}
+		else if (taskNumber == 4) {
+			glm::vec3 task = camera.getCameraPosition();
+			if (task.x >= 75 && task.x <= 105 && task.z >= -215 && task.z <= -185) {
+
+				taskNumber = 5;
+			}
+
+		}
+		else if (taskNumber == 5) {
+			glm::vec3 task = camera.getCameraPosition();
+			if (task.x >= -15 && task.x <= 15 && task.z >= -15 && task.z <= 15) {
+
+				taskNumber = -1;
+				isFinished = true;
+			}
+
+		}
+
+
 		
-			float floatSpeed = 2.0f;
-			float floatHeight = 5.0f;
+			float floatSpeed = 1.5f;
+			float floatHeight = 7.0f;
 			float floatOffset = sin(glfwGetTime() * floatSpeed) * floatHeight;
 
 			ModelMatrix = glm::mat4(1.0);
@@ -300,8 +477,12 @@ int main()
 			glUniformMatrix4fv(ModelMatrixID, 1, GL_FALSE, &ModelMatrix[0][0]);
 			rocket1.draw(shader);
 
+			float floatSpeedAlien = 5.0f;
+			float floatHeightAlien = 3.0f;
+			float floatOffsetAlien = sin(glfwGetTime() * floatSpeedAlien) * floatHeightAlien;
+
 			ModelMatrix = glm::mat4(1.0);
-			ModelMatrix = glm::translate(ModelMatrix, glm::vec3(60.0f, 0.0f + floatOffset, 100.0f));
+			ModelMatrix = glm::translate(ModelMatrix, glm::vec3(60.0f, 0.0f + floatOffsetAlien, 100.0f));
 			float rotationAngleAlien = glfwGetTime() * glm::radians(100.0f);
 			ModelMatrix = glm::rotate(ModelMatrix, rotationAngleAlien, glm::vec3(0.0f, 1.0f, 0.0f));
 			ModelMatrix = glm::scale(ModelMatrix, glm::vec3(65.0f, 65.0f, 65.0f));
@@ -322,8 +503,15 @@ int main()
 		glDrawArrays(GL_TRIANGLES, 0, 36);
 		glDepthFunc(GL_LESS); // Restore depth test
 
+		ImGui::Render();
+		ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
+
 		window.update();
 	}
+
+	ImGui_ImplOpenGL3_Shutdown();
+	ImGui_ImplGlfw_Shutdown();
+	ImGui::DestroyContext();
 	glDeleteVertexArrays(1, &skyboxVAO);
 	glDeleteBuffers(1, &skyboxVBO);
 	glfwTerminate();
