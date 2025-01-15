@@ -1,3 +1,7 @@
 ﻿  main.cpp
-D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\main.cpp(175,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\main.cpp(211,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\main.cpp(468,22): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\main.cpp(472,24): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\main.cpp(482,27): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
+D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\GameEngine\main.cpp(486,29): warning C4244: 'initializing': conversion from 'double' to 'float', possible loss of data
   GameEngine.vcxproj -> D:\Documents\GitHub\ESC-from-Planet-X-3D\GameEngine\Debug\GameEngine.exe
