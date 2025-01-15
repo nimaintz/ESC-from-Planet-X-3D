@@ -12,7 +12,7 @@ Camera::Camera(glm::vec3 cameraPosition)
 
 Camera::Camera()
 {
-	this ->cameraPosition = glm::vec3(0.0f, 25.0f, 100.0f); //start position of our camera x y z
+	this ->cameraPosition = glm::vec3(250.0f, 15.0f, 250.0f); //start position of our camera x y z
 	this ->cameraViewDirection = glm::vec3(0.0f, 0.0f, -1.0f);
 	this ->cameraUp = glm::vec3(0.0f, 1.0f, 0.0f);
 	this->cameraRight = glm::cross(cameraViewDirection, cameraUp);
